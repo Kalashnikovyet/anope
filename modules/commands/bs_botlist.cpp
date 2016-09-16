@@ -17,6 +17,7 @@ class CommandBSBotList : public Command
 	CommandBSBotList(Module *creator) : Command(creator, "botserv/botlist", 0, 0)
 	{
 		this->SetDesc(_("Lists available bots"));
+		this->AllowUnregistered(true);
 	}
 
 	void Execute(CommandSource &source, const std::vector<Anope::string> &params) anope_override
